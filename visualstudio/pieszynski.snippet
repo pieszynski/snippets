@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xf</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>xf</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>test_name</ID>
+					<Default>Name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			[Fact]
+			public void $test_name$Test()
+			{
+				// arrange
+				$end$
+				// act
+				// assert
+			}
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xa</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>xa</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>test_name</ID>
+					<Default>Name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			[Fact]
+			public async Task $test_name$AsyncTest()
+			{
+				// arrange
+				$end$
+				// act
+				// assert
+			}
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xt</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>xt</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>test_name</ID>
+					<Default>Name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			[Theory]
+			[InlineData()]
+			public void $test_name$Test()
+			{
+				// arrange
+				$end$
+				// act
+				// assert
+			}
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xtt</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>xtt</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Xunit</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>data_param</ID>
+					<Default>"test-value"</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			[Theory]
+			[InlineData($data_param$)]$end$
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xfc</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>xfc</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Xunit.Abstractions</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>class_name</ID>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			readonly ITestOutputHelper _output;
+
+			public $class_name$(ITestOutputHelper output)
+			{
+				_output = output;$end$
+			}
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>isn</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>isn</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>param_name</ID>
+					<Default>VarName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			string.IsNullOrEmpty($param_name$))$end$
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>rre</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>rre</Shortcut>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>param_name</ID>
+					<Default>VarName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			if (string.IsNullOrEmpty($param_name$))
+				throw new ArgumentNullException(nameof($param_name$));
+			$end$
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>iia</Title>
+			<Author>pieszynski</Author>
+			<Shortcut>iia</Shortcut>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>Moq</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>type_name</ID>
+					<Default>string</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp"><![CDATA[
+			It.IsAny<$type_name$>();$end$
+			]]>			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

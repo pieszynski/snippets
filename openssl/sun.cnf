@@ -1,0 +1,12 @@
+[ req ]
+distinguished_name         = req_sun
+x509_extensions            = v3_ca
+prompt                     = no
+
+[ req_sun ]
+countryName                = PL
+organizationName           = Pieszynski
+commonName                 = Sun
+
+[ v3_ca ]
+basicConstraints           = critical, CA:true
